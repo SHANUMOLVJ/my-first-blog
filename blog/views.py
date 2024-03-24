@@ -39,3 +39,6 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+def exit_app(request):
+    # Redirect to a specific URL after exiting (you can change this URL)
+    return redirect('home')  # Assuming 'home' is the name of your homepage URL pattern
